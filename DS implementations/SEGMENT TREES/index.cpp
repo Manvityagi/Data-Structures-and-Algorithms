@@ -39,7 +39,7 @@ int query(int* tree,int s, int e, int TN, int left, int right){
     if(s > right || e < left)
         return 0;
     
-    if(left >= s && right <= e)
+    if(left <= s && right >= e)
         return tree[TN];
     
     int mid = s + (e-s)/2;
