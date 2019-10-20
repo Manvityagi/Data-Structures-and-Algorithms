@@ -134,6 +134,9 @@ int query(lazynode *lazy, treenode *tree, int low, int high, int qs, int qe, int
 			tree[treeindex].ss = val * val * (high - low + 1);
 			tree[treeindex].s = val * (high - low + 1);
 		}
+
+		//gadbad lag rhi h kuch code me 
+		//parikh sir ke video ke accoding, shyd lazy ke child me val directly na rakh ke, calculate karke rakha h
 		//update children in lazy tree
 		if (low != high)
 		{
