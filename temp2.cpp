@@ -64,7 +64,7 @@ int main()
 
 			if (diff[it] > 0)
 			{
-				cout << " 1 NO" << endl;
+				cout << "NO" << endl;
 				found = true;
 				break;
 			}
@@ -82,7 +82,7 @@ int main()
 		//all zeros
 		if (it == n)
 		{
-			cout << "1 YES" << endl;
+			cout << "YES" << endl;
 			found = true;
 			continue;
 		}
@@ -96,7 +96,7 @@ int main()
 
 			if (diff[it] > 0 || (diff[it] != 0 && diff[it] != d))
 			{
-				cout << d << " 2 NO" << endl;
+				cout << "NO" << endl;
 				found = true;
 				break;
 			}
@@ -119,7 +119,7 @@ int main()
 
 				if (diff[i] == 0 && fz && nz)
 				{
-					cout << "NEW NO" << endl;
+					cout << "NO" << endl;
 					continue;
 				}
 
@@ -142,7 +142,7 @@ int main()
 				{
 					
 					found = true;
-					cout << diff[i] << " "<< d << " 4 NO" << endl;
+					cout << "NO" << endl;
 					break;
 				}
 
@@ -152,7 +152,7 @@ int main()
 
 		if (!found)
 		{
-			cout << "2 YES" << endl;
+			cout << "YES" << endl;
 		}
 	}
 	return 0;
