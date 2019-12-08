@@ -1,158 +1,91 @@
+#include <iostream>
 #include <bits/stdc++.h>
+#define ll long long
 using namespace std;
 
-#define PB push_back
-#define F first
-#define S second
-#define MP make_pair
-#define LL long long
-#define ULL unsigned long long
-#define LB lower_bound
-#define MOD1 1000000007
-#define MOD2 1000000009
-#define INF LONG_MAX
-#define db(x, y) cout << x << " " << y << endl;
-#define LD long double
-#define PR pair<LD, LL>
-
-int gcd(int a, int b)
+void build(ll node, ll start, ll end, ll tree[], ll a[])
 {
-	if (b == 0)
-		return a;
-	return gcd(b, a % b);
+	if (start == end)
+		tree[node] = a[start];
+	else
+	{
+		ll mid = (start + end) / 2;
+		build(2 * node, start, mid, tree, a);
+		build(2 * node + 1, mid + 1, end, tree, a);
+		tree[node] = tree[2 * node] + tree[2 * node + 1];
+	}
+}
+
+void update(ll node, ll start, ll end, ll idx, ll val, ll tree[], ll a[])
+{
+	if (start == end)
+	{
+		a[idx] = val;
+		tree[node] = val;
+	}
+	else
+	{
+		ll mid = (start + end) / 2;
+		if (idx >= start && idx <= mid)
+			update(2 * node, start, mid, idx, val, tree, a);
+		else
+			update(2 * node + 1, mid + 1, end, idx, val, tree, a);
+
+		tree[node] = tree[2 * node] + tree[2 * node + 1];
+	}
+}
+
+int query(ll node, ll start, ll end, ll val, ll tree[])
+{
+	if (start == end && val == 1)
+	{
+		return end;
+	}
+	ll mid = (start + end) / 2;
+	ll left, right;
+	left = tree[2 * node];
+	right = tree[2 * node + 1];
+	if (val > left)
+	{
+		val = val - left;
+		return query(2 * node + 1, mid + 1, end, val, tree);
+	}
+	else
+	{
+		return query(2 * node, start, mid, val, tree);
+	}
 }
 
 int main()
 {
-	static const int _ = []() {
-		ios::sync_with_stdio(false);
-		cin.tie(NULL);
-		cout.tie(NULL);
-		return 0;
-	}();
-
-	int t;
-	cin >> t;
-	while (t--)
+	ll n, q, x;
+	cin >> n >> q;
+	x = 4 * n;
+	ll tree[x] = {1}, a[n + 1];
+	for (ll i = 1; i <= n; i++)
+		a[i] = 1;
+	build(1, 1, n, tree, a);
+	while (q--)
 	{
-		int n, d = 0;
-		cin >> n;
-		vector<int> A(n);
-		vector<int> B(n);
-		for (int i = 0; i < n; i++)
-			cin >> A[i];
-		for (int i = 0; i < n; i++)
-			cin >> B[i];
-		vector<int> diff(n);
-
-		bool found = false;
-		int it = 0;
-		diff[0] = A[0] - B[0];
-		int fd = diff[0];
-		bool alld = true;
-		if (diff[0] > 0)
+		ll aa, b;
+		cin >> aa >> b;
+		if (aa == 1)
 		{
-			cout << "NO" << endl;
-			continue;
-		}
-		for (it = 1; it < n; it++)
-		{
-			diff[it] = A[it] - B[it];
-
-			if (diff[it] != fd)
-				alld = false;
-
-			if (diff[it] > 0)
+			if (b > tree[1])
+				cout << "-1" << endl;
+			else
 			{
-				cout << "NO" << endl;
-				found = true;
-				break;
+				cout << query(1, 1, n, b, tree) << endl;
+				;
+				// cout<<c<<endl;
 			}
-
-			if (diff[it] != 0)
-			{
-				d = diff[it];
-				break;
-			}
+			//for(ll i=1;i<x;i++)
+			// cout<<tree[i]<<" ";
 		}
 
-		if (found)
-			continue;
-
-		//all zeros
-		if (it == n)
+		else
 		{
-			cout << "YES" << endl;
-			found = true;
-			continue;
-		}
-
-		while (it < n)
-		{
-			diff[it] = A[it] - B[it];
-
-			if (diff[it] != fd)
-				alld = false;
-
-			if (diff[it] > 0 || (diff[it] != 0 && diff[it] != d))
-			{
-				cout << "NO" << endl;
-				found = true;
-				break;
-			}
-			it++;
-		}
-
-		if (alld)
-		{
-			cout << "YES" << endl;
-			continue;
-		}
-
-		if (!found)
-		{
-			bool nz = false;
-			bool fz = false;
-			int i = 0;
-			while (i < n)
-			{
-
-				if (diff[i] == 0 && fz && nz)
-				{
-					cout << "NO" << endl;
-					continue;
-				}
-
-				while (i < n && diff[i] == d)
-				{
-					nz = true;
-					i++;
-				}
-
-				if (found)
-					break;
-
-				while (i < n && diff[i] == 0)
-				{
-					fz = true;
-					i++;
-				}
-
-				if (i < n && diff[i] != 0 && diff[i] != d)
-				{
-					
-					found = true;
-					cout << "NO" << endl;
-					break;
-				}
-
-				i++;
-			}
-		}
-
-		if (!found)
-		{
-			cout << "YES" << endl;
+			update(1, 1, n, b, 0, tree, a);
 		}
 	}
 	return 0;

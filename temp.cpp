@@ -1,159 +1,35 @@
-#include <bits/stdc++.h>
-using namespace std;
-
-#define PB push_back
-#define F first
-#define S second
-#define MP make_pair
-#define LL long long
-#define ULL unsigned long long
-#define LB lower_bound
-#define MOD1 1000000007
-#define MOD2 1000000009
-#define INF LONG_MAX
-#define db(x, y) cout << x << " " << y << endl;
-#define LD long double
-#define PR pair<LD, LL>
-
-int gcd(int a, int b)
+class Solution
 {
-	if (b == 0)
-		return a;
-	return gcd(b, a % b);
-}
-
-int main()
-{
-	static const int _ = []() {
-		ios::sync_with_stdio(false);
-		cin.tie(NULL);
-		cout.tie(NULL);
-		return 0;
-	}();
-
-	int t;
-	cin >> t;
-	while (t--)
+public:
+	int longestStrChain(vector<string> &words)
 	{
-		int n, d = 0;
-		cin >> n;
-		vector<int> A(n);
-		vector<int> B(n);
-		for (int i = 0; i < n; i++)
-			cin >> A[i];
-		for (int i = 0; i < n; i++)
-			cin >> B[i];
-		vector<int> diff(n);
+		int n = words.size();
+		vector<int> dp(n, 1);
+		if (n == 0)
+			return 0;
+		int res = INT_MAX;
+		unordered_map<string, int> map;
+		map[words[0]] = 1;
 
-		bool found = false;
-		int it = 0;
-		diff[0] = A[0] - B[0];
-		int fd = diff[0];
-		bool alld = true;
-		if (diff[0] > 0)
+		dp[0] = 1;
+
+		for (int i = 1; i < n; i++)
 		{
-			cout << "NO" << endl;
-			continue;
-		}
-		for (it = 1; it < n; it++)
-		{
-			diff[it] = A[it] - B[it];
 
-			if (diff[it] != fd)
-				alld = false;
-
-			if (diff[it] > 0)
+			//try to delete each word & search for the remaining in the map, pick the best
+			for (int j = 0; j < words[i].size(); j++)
 			{
-				cout << " 1 NO" << endl;
-				found = true;
-				break;
+				string word = words[i].substr(0, j) + words[i].substr(j + 1);
+				// cout << word << endl;
+				dp[i] = max(dp[i], map[word] + 1);
 			}
 
-			if (diff[it] != 0)
-			{
-				d = diff[it];
-				break;
-			}
+			//insert into map
+			map[words[i]] = dp[i];
+
+			res = max(dp[i], res)
 		}
 
-		if (found)
-			continue;
-
-		//all zeros
-		if (it == n)
-		{
-			cout << "1 YES" << endl;
-			found = true;
-			continue;
-		}
-
-		while (it < n)
-		{
-			diff[it] = A[it] - B[it];
-
-			if (diff[it] != fd)
-				alld = false;
-
-			if (diff[it] > 0 || (diff[it] != 0 && diff[it] != d))
-			{
-				cout << d << " 2 NO" << endl;
-				found = true;
-				break;
-			}
-			it++;
-		}
-
-		if (alld)
-		{
-			cout << "YES" << endl;
-			continue;
-		}
-
-		if (!found)
-		{
-			bool nz = false;
-			bool fz = false;
-			int i = 0;
-			while (i < n)
-			{
-
-				if (diff[i] == 0 && fz && nz)
-				{
-					cout << "NEW NO" << endl;
-					continue;
-				}
-
-				while (i < n && diff[i] == d)
-				{
-					nz = true;
-					i++;
-				}
-
-				if (found)
-					break;
-
-				while (i < n && diff[i] == 0)
-				{
-					fz = true;
-					i++;
-				}
-
-				if (i < n && diff[i] != 0 && diff[i] != d)
-				{
-					
-					found = true;
-					cout << diff[i] << " "<< d << " 4 NO" << endl;
-					break;
-				}
-
-				i++;
-			}
-		}
-
-		if (!found)
-		{
-			cout << "2 YES" << endl;
-		}
+		return res;
 	}
-	return 0;
-}
+};
