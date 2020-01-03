@@ -11,32 +11,43 @@ using namespace std;
 #define MOD1 1000000007
 #define MOD2 1000000009
 #define INF LONG_MAX
-#define pr(i,x,n) for(int ii=i;ii<n+i;ii++){cout<<x[ii]<<" ";}cout<<endl;
-#define ip(i,x,n) for(int ii=i;ii<n+i;ii++){cin>>x[ii];};
-#define db(x,y) cout<<x<<" "<<y<<endl;
+#define pr(i, x, n)                    \
+    for (int ii = i; ii < n + i; ii++) \
+    {                                  \
+        cout << x[ii] << " ";          \
+    }                                  \
+    cout << endl;
+#define ip(i, x, n)                    \
+    for (int ii = i; ii < n + i; ii++) \
+    {                                  \
+        cin >> x[ii];                  \
+    };
+#define db(x, y) cout << x << " " << y << endl;
 #define LD long double
-#define PR pair<LD,LL>
+#define PR pair<LD, LL>
 
-int gcd(int a, int b) 
-{ 
-    if (b == 0) 
-        return a; 
-    return gcd(b, a % b);       
-} 
- 
-int main() {
-static const int _ = []() {
-  ios::sync_with_stdio(false);
-  cin.tie(NULL);
-  cout.tie(NULL);
-  return 0;
-}();
+int gcd(int a, int b)
+{
+    if (b == 0)
+        return a;
+    return gcd(b, a % b);
+}
 
-	int t ;
-	cin >> t;
-	while(t--){
+int main()
+{
+    static const int _ = []() {
+        ios::sync_with_stdio(false);
+        cin.tie(NULL);
+        cout.tie(NULL);
+        return 0;
+    }();
+    int t;
+    cin >> t;
+    while(t--){
         int n;
-		cin >> n;
-	}
-	return 0;
+        cin >> n;
+    }
+
+
+    return 0;
 }
