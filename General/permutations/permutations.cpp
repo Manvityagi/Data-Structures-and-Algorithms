@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 //lexicographically sorted
 void permute(string s, int i, int n){
     if(i == n){
