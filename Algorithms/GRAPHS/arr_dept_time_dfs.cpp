@@ -29,29 +29,3 @@ void dfs(Graph const &graph, int v, vector<int> arrival, vector<int> dept, vecto
     dept[v] = time++;
 }
 
-
-
-
-//  Edit distance
-//  Longest palindrome sequence memoized
-//  Tabulation v
-//  Longest palindrome substring
-//  Min palindromic cut
-//  Matrix chain multiplication
-//  Egg drop
-//  Maxm sum no adjacent element
-//  Count of n length binary string in which there are no adjacent 0
-//  Fractional knapsack
-//  Climb down
-//  Count maze path
-//  Min cost path
-//  Gold mine
-//  Min jumps
-//  Plargest increasing subsequence
-//  Rod cutting
-//  Target sum subset
-//  Coin change permutation
-//  Coin change combination
-//  Unbounded knapsack
-//  Zero one knapsack
-//  Lcs
