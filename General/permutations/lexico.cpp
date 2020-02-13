@@ -1,67 +1,96 @@
-#include <bits/stdc++.h>
-using namespace std;
+// Steps to generate the next higher permutation:
+// 1. Take the previously printed permutation and find the rightmost character in it, which is smaller than its next character. Let us call this character as ‘first character’.
 
-int factorial(int n)
-{
-    // single line to find factorial
-    return (n == 1 || n == 0) ? 1 : n * factorial(n - 1);
-}
+// 2. Now find the ceiling of the ‘first character’. Ceiling is the smallest character on right of ‘first character’, which is greater than ‘first character’. Let us call the ceil character as ‘second character’.
 
-vector<string> lexpermute(string s)
-{
-    vector<string> output;
-    int n = s.size();
-    char first_char, sec_char;
-    sort(s.begin(), s.end());
-    output.push_back(s);
-    int anscount = factorial(s.size()), fc_pos, sc_pos;
+// 3. Swap the two characters found in above 2 steps.
 
-    for (int i = 1; i < anscount; i++)
-    {
-        //previously printed string
-        string prev = output[i - 1];
+// 4. Sort the substring (in non-decreasing order) after the original index of ‘first character’.
 
-        //find rightmost character which is smaller than its next character
-        for (int i = n - 2; i >= 0; i--)
-        {
-            if (prev[i] < prev[i + 1])
-            {
-                first_char = prev[i];
-                fc_pos = i;
-                break;
-            }
-        }
+#include <bits/stdc++.h> 
+using namespace std; 
 
-        //find second char // smallest character greater than first character
-        sec_char = first_char;
-        for (int i = fc_pos + 1; i < n; i++)
-        {
-            if (prev[i] < sec_char && prev[i] > first_char)
-            {
-                sec_char = prev[i];
-                sc_pos = i;
-            }
-        }
+/* Following function is needed for library function qsort(). Refer 
+http://www.cplusplus.com/reference/clibrary/cstdlib/qsort/ */
+int compare (const void *a, const void * b) 
+{ return ( *(char *)a - *(char *)b ); } 
 
-        //swap fc & sc
-        swap(prev[fc_pos], prev[sc_pos]);
+// A utility function two swap two characters a and b 
+void swap (char* a, char* b) 
+{ 
+	char t = *a; 
+	*a = *b; 
+	*b = t; 
+} 
 
-        //sort the substring after fc original index
-        sort(prev.begin() + fc_pos + 1, prev.end());
-        output.push_back(prev);
-    }
+// This function finds the index of the smallest character 
+// which is greater than 'first' and is present in str[l..h] 
+int findCeil (char str[], char first, int l, int h) 
+{ 
+	// initialize index of ceiling element 
+	int ceilIndex = l; 
 
-    return output;
-}
+	// Now iterate through rest of the elements and find 
+	// the smallest character greater than 'first' 
+	for (int i = l+1; i <= h; i++) 
+	if (str[i] > first && str[i] < str[ceilIndex]) 
+			ceilIndex = i; 
 
-int main()
-{
-    string s;
-    cin >> s;
+	return ceilIndex; 
+} 
 
-    vector<string> output = lexpermute(s);
+// Print all permutations of str in sorted order 
+void sortedPermutations ( char str[] ) 
+{ 
+	// Get size of string 
+	int size = strlen(str); 
 
-    for(auto a : output){
-        cout << a << " ";
-    }
-}
+	// Sort the string in increasing order 
+	qsort( str, size, sizeof( str[0] ), compare ); 
+
+	// Print permutations one by one 
+	bool isFinished = false; 
+	while ( ! isFinished ) 
+	{ 
+		// print this permutation 
+		cout << str << endl; 
+
+		// Find the rightmost character which is 
+		// smaller than its next character. 
+		// Let us call it 'first char' 
+		int i; 
+		for ( i = size - 2; i >= 0; --i ) 
+		if (str[i] < str[i+1]) 
+			break; 
+
+		// If there is no such character, all are 
+		// sorted in decreasing order, means we 
+		// just printed the last permutation and we are done. 
+		if ( i == -1 ) 
+			isFinished = true; 
+		else
+		{ 
+			// Find the ceil of 'first char' in 
+			// right of first character. 
+			// Ceil of a character is the smallest 
+			// character greater than it 
+			int ceilIndex = findCeil( str, str[i], i + 1, size - 1 ); 
+
+			// Swap first and second characters 
+			swap( &str[i], &str[ceilIndex] ); 
+
+			// Sort the string on right of 'first char' 
+			qsort( str + i + 1, size - i - 1, sizeof(str[0]), compare ); 
+		} 
+	} 
+} 
+
+// Driver program to test above function 
+int main() 
+{ 
+	char str[] = "ABCD"; 
+	sortedPermutations( str ); 
+	return 0; 
+} 
+
+// This is code is contributed by rathbhupendra 
