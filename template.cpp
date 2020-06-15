@@ -11,17 +11,21 @@ using namespace std;
 #define MOD1 1000000007
 #define MOD2 1000000009
 
-void erast()
-{
-    int n;
-    vector<char> is_prime(n + 1, true);
-    is_prime[0] = is_prime[1] = false;
-    for (int i = 2; i <= n; i++)
-    {
-        if (is_prime[i] && (long long)i * i <= n)
-        {
-            for (int j = i * i; j <= n; j += i)
-                is_prime[j] = false;
+void bfs(int n, int s, vector<vector<int>> &g, vector<int> &lev){
+    vector<bool> vis(n,false);
+    queue<int> q;
+    q.push(s);
+    lev[s] = 0;
+    vis[s] = true;
+    while(q.size()){
+        int u = q.front();
+        q.pop();
+        for(int &v: g[u]){
+            if(!vis[v]){
+                lev[v] = lev[u]+1;
+                q.push(v);
+                vis[v] = true;
+            }
         }
     }
 }
@@ -32,7 +36,6 @@ int gcd(int a, int b)
         return a;
     return gcd(b, a % b);
 }
-
 
 int main()
 {

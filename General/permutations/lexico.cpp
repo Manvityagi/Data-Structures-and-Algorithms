@@ -1,7 +1,11 @@
 // Steps to generate the next higher permutation:
-// 1. Take the previously printed permutation and find the rightmost character in it, which is smaller than its next character. Let us call this character as ‘first character’.
 
-// 2. Now find the ceiling of the ‘first character’. Ceiling is the smallest character on right of ‘first character’, which is greater than ‘first character’. Let us call the ceil character as ‘second character’.
+// 1. Take the previously printed permutation and find the rightmost character in it, 
+//which is smaller than its next character. Let us call this character as ‘first character’.
+
+// 2. Now find the ceiling of the ‘first character’.
+// Ceiling is the smallest character on right of ‘first character’, which is greater than ‘first character’.
+// Let us call the ceil character as ‘second character’.
 
 // 3. Swap the two characters found in above 2 steps.
 
