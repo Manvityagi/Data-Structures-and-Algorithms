@@ -25,6 +25,7 @@ void kruskals(edge* input, int V, int E) {
     vector<edge> output(V-1);
     vector<int> parent(V);
     
+    //make_set
     for(int i = 0; i < V; i++)
         parent[i] = i;
     
@@ -33,12 +34,14 @@ void kruskals(edge* input, int V, int E) {
     
     while(count < V-1)
     {
+         //union_set
         int srcParent = findParent(input[i].s,parent);
         int destParent = findParent(input[i].d,parent);
         
         if(srcParent != destParent)
         {
             output[count++] = input[i];
+            //union_set
             parent[srcParent] = destParent;  
         } 
         i++;
