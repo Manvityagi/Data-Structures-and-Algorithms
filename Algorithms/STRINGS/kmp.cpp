@@ -9,7 +9,7 @@ vector<int> calculateLPS(string pat)
     int j = 1, i = 0;
     while (i < n && j < n)
     {
-        if (pat[i] != pat[j])
+        if (pat[i] == pat[j])
         {
             LPS[j] = i + 1;
             i++;
