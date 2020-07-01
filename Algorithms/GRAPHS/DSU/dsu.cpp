@@ -28,7 +28,8 @@ The trick is to make the paths for all those nodes shorter,
 by setting the parent of each visited vertex directly to p.
 */
 
-int find_set(int v) { //time complexity O(logn) per call on average
+int find_set(int v)
+{ //time complexity O(logn) per call on average
     if (v == parent[v])
         return v;
     return parent[v] = find_set(parent[v]);
@@ -50,18 +51,20 @@ In both approaches the essence of the optimization is the same:
 we attach the tree with the lower rank to the one with the bigger rank.
 */
 
-
 /*-------------------------------Union by size------------------------------------------------------*/
-void make_set(int v) {
+void make_set(int v)
+{
     parent[v] = v;
     size[v] = 1;
 }
 
-void union_sets(int a, int b) {
+void union_sets(int a, int b)
+{
     a = find_set(a);
     b = find_set(b);
-    if (a != b) {
-        if (size[a] < size[b])  
+    if (a != b)
+    {
+        if (size[a] < size[b])
             swap(a, b);
         parent[b] = a;
         size[a] += size[b];
@@ -69,15 +72,18 @@ void union_sets(int a, int b) {
 }
 
 /*-------------------------------Union by Rank------------------------------------------------------*/
-void make_set(int v) {
+void make_set(int v)
+{
     parent[v] = v;
     rank[v] = 0;
 }
 
-void union_sets(int a, int b) {
+void union_sets(int a, int b)
+{
     a = find_set(a);
     b = find_set(b);
-    if (a != b) {
+    if (a != b)
+    {
         if (rank[a] < rank[b])
             swap(a, b);
         parent[b] = a;
