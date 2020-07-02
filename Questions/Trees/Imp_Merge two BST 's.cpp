@@ -1,112 +1,53 @@
-// https://practice.geeksforgeeks.org/problems/merge-two-bst-s/
-
-void inorder(Node *root, vector<int> &ans)
+// https://leetcode.com/problems/all-elements-in-two-binary-search-trees/
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution
 {
-    if(root==NULL)
-        return;
-    inorder(root->left, ans);
-    ans.push_back(root->data);
-    inorder(root->right, ans);
-}
-
-
-vector<int> merge(Node *root1,Node *root2)
-{
-    stack<Node *> s1;
-    stack<Node *> s2;
-    Node *c1 = root1;
-    Node *c2 = root2;
-
-    vector<int> ans;
-    
-    // inorder on root2 if root1 is null
-    if(root1==NULL)
+public:
+    vector<int> getAllElements(TreeNode *root1, TreeNode *root2)
     {
-        inorder(root2, ans);
-        return ans;
-    }
-    
-    // inorder on root1 if root2 is null
-    if(root2==NULL)
-    {
-        inorder(root1, ans);
-        return ans;
-    }
-    
-    // Run the loop while there are nodes not yet printed.  
-    // The nodes may be in stack(explored, but not printed)  
-    // or may be not yet explored  
-    while(c1!=NULL or !s1.empty() or c2!=NULL or !s2.empty())
-    {
-        // Following steps follow iterative Inorder Traversal  
-        if(c1!=NULL or c2!=NULL)
+        vector<int> ans;
+        stack<TreeNode *> s1;
+        stack<TreeNode *> s2;
+        TreeNode *cur1 = root1, *cur2 = root2;
+
+        while (cur1 || cur2 || !s1.empty() || !s2.empty())
         {
-            // Reach the leftmost node of both BSTs and push ancestors of  
-            // leftmost nodes to stack s1 and s2 respectively 
-            if(c1!=NULL)
+            while (cur1)
             {
-                s1.push(c1);
-                c1 = c1->left;
+                s1.push(cur1);
+                cur1 = cur1->left;
             }
-            
-            if(c2!=NULL)
+            while (cur2)
             {
-                s2.push(c2);
-                c2 = c2->left;
+                s2.push(cur2);
+                cur2 = cur2->left;
+            }
+
+            if (s2.empty() || (!s1.empty() && s1.top()->val < s2.top()->val))
+            {
+                cur1 = s1.top();
+                s1.pop();
+                ans.emplace_back(cur1->val);
+                cur1 = cur1->right;
+            }
+            else
+            {
+                cur2 = s2.top();
+                s2.pop();
+                ans.emplace_back(cur2->val);
+                cur2 = cur2->right;
             }
         }
-        else 
-        {
-            // If we reach a NULL node and either of the stacks is empty,  
-            // then one tree is exhausted, ptint the other tree  
-            if(s1.empty())
-            {
-                while(!s2.empty())
-                {
-                    c2  = s2.top();
-                    s2.pop();
-                    c2->left= NULL;
-                    inorder(c2, ans);
-                }
-                return ans;
-            }
-            
-            if(s2.empty())
-            {
-                while(!s1.empty())
-                {
-                    c1  = s1.top();
-                    s1.pop();
-                    c1->left = NULL;
-                    inorder(c1, ans);
-                }
-                return ans;
-            }
-            
-            // Pop an element from both stacks and compare the  
-            // popped elements  
-            c1 = s1.top();
-            c2  = s2.top();
-            s1.pop();
-            s2.pop();
-            
-            // If element of first tree is smaller, then print it
-            // and push the right subtree. If the element is larger,
-            // then we push it back to the corresponding stack.
-            if(c1->data < c2->data)
-            {
-                ans.push_back(c1->data);
-                c1 = c1->right;
-                s2.push(c2);
-                c2 = NULL;
-            }else
-            {
-                ans.push_back(c2->data);
-                c2 = c2->right;
-                s1.push(c1);
-                c1 = NULL;
-            }
-        }
+        return ans;
     }
-    return ans;
-}
+};
