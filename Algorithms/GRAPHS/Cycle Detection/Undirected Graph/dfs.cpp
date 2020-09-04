@@ -14,7 +14,6 @@ bool dfs(vector<int> g[], int src, int parent){
 
 bool isCyclic(vector<int> g[], int v)
 {
-    // visited.clear();
     fill(visited.begin(),visited.end(),0);
     for(int i = 0; i < v; i++)
         if(!visited[i]){

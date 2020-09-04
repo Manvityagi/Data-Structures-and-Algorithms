@@ -1,73 +1,44 @@
-#include <iostream>
 #include<bits/stdc++.h>
 using namespace std;
 
-// Data structure to store graph edges
-struct Edge {
-	int dest, weight;
-};
+int v, e;
+const int N = 100;
+vector<pair<int,int>> g[N];
 
-// data structure to store heap nodes
-struct Node {
-	int vertex, weight;
-};
+vector<int> bfs(){
+    vector<int> distance(v,INT_MAX);
+    set<pair<int,int>> q; //distance, vertex - so that it is automatically sorted by distance
+    vector<int> visited(v,0);
+    q.emplace(0,0);
 
-struct compare
-{
-    bool operator()(const Node &a, const Node &b){
-        return a.weight > b.weight;
+    while(!q.empty()){
+        int src = q.begin()->second;
+        if(visited[src]) continue;
+        visited[src] = 1;
+        q.erase(q.begin());
+
+        for(auto u : g[src]){
+            int dest = u.first, wt = u.second;
+            if(visited[dest]) continue;
+
+            if(distance[dest] > distance[src] + wt){
+                distance[dest] = distance[src] + wt;
+                q.emplace(distance[dest],dest);
+            }
+        }
     }
-};
+    return distance;
+}
 
-int main()
-{
-  int V, E, tempX, tempY;
-  cin >> V >> E;
-  vector<vector<Edge>> adjList(V, vector<Edge>(E));
-  vector<bool> visited(V,0);
-  priority_queue<Node,vector<Node>, compare> minpq;
-  vector<int> dist(V,INT_MAX);
-    for(int i = 0; i < V; i++)
-    {
-        int ei,ej,wi;
-        cin >> ei >> ej >> wi;
-        
-        adjList[ei].push_back({ej,wi});   
-        adjList[ej].push_back({ei,wi});   
-
+int main(){
+    cin >> v >> e;
+    for(int i = 0; i < e; i++){
+        int src,dest,wt;
+        cin >> src >> dest >> wt;
+        g[src].emplace_back(dest,wt);
+        g[dest].emplace_back(src,wt);
     }
-    dist[0] = 0;
-    visited[0] = 1;
-    minpq.push({0,0});
-    
-    while(!minpq.empty()) {
-        Node node = minpq.top();
-        minpq.pop();
-        
-       // get vertex number
-		int u = node.vertex;
 
-		// do for each neighbor v of u
-		for (auto i : adjList[u])
-		{
-			int v = i.dest;
-			int weight = i.weight;
-
-			// Relaxation step
-			if (!visited[v] && (dist[u] + weight) < dist[v])
-			{
-				dist[v] = dist[u] + weight;
-				minpq.push({v, dist[v]});
-			}
-		}
-        
-        visited[u] = 1;      
-    }
-    
-    for(int i = 0; i < dist.size(); i++)
-    {
-        cout << i << " " << dist[i] << endl;
-    }
-    
-  return 0;
+    auto shortestPaths = bfs();
+    for(auto u : shortestPaths) cout << u << " "; 
 }
