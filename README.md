@@ -36,7 +36,6 @@ To get started have a look at our [documentation on contributing](https://github
         <img width="150" height="150" src="https://avatars0.githubusercontent.com/u/16416902?s=400&u=827b072be56eb685cdd24b290d2a72bc6c56c443&v=4">
         <br>
         <a href="https://github.com/ay2306">Ayush Mahajan</a>
-        <p>Loaders &amp; Plugins</p>
       </td>
      </tr>
   </tbody>
