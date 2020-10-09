@@ -12,9 +12,9 @@ A quick sneak peek into this repo before an interview may help!
 
 <h2 align="center">Documentation Guidelines</h2>
 
--   Find easy access and documentation of all codes [here](#https://github.com/Manvityagi/Data-Structures-and-Algorithms/blob/master/DOCUMENTATION.md)
+-   Find easy access and documentation of all codes [here](https://github.com/Manvityagi/Data-Structures-and-Algorithms/blob/master/DOCUMENTATION.md)
 
--   Every addition in the repository must be accomapnied by necessary addition in the [documentation](#https://github.com/Manvityagi/Data-Structures-and-Algorithms/blob/master/DOCUMENTATION.md)
+-   Every addition in the repository must be accomapnied by necessary addition in the [documentation](Https://github.com/Manvityagi/Data-Structures-and-Algorithms/blob/master/DOCUMENTATION.md)
 
 
 <h2 align="center">Contributing</h2>
