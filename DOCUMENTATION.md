@@ -21,7 +21,7 @@
  
 <h2 align="center">Sorting Algos</h2> 
 
-1. [Bubble Sort](https://github.com/Manvityagi/Data-Structures-and-Algorithms/blob/master/Algorithms/Sorting/bubbleSort.cpp)
+1. [Bubble Sort](./Algorithms/Sorting/bubbleSort.cpp)
 2. [Insertion Sort](https://github.com/Manvityagi/Data-Structures-and-Algorithms/blob/master/Algorithms/Sorting/insertionSort.cpp)
 3. [Merge Sort](https://github.com/Manvityagi/Data-Structures-and-Algorithms/blob/master/Algorithms/Sorting/mergeSort.cpp)
 4. [Selection Sort](https://github.com/Manvityagi/Data-Structures-and-Algorithms/blob/master/Algorithms/Sorting/selectionSort.cpp)
