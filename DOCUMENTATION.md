@@ -28,6 +28,22 @@
 
 <h2 align="center">BackTracking</h2>
 
+1. [Selection Problems]()
+2. [Binary strings that can be formed from given wildcard pattern]()
+3. [Determine-pattern-matches-string-not]()
+4. [Find Longest Possible Route in a Matrix]()
+5. [Find-combinations-of-elements-satisfies-given-constraints]()
+6. [Find-shortest-path-in-maze]()
+7. [Find-ways-calculate-target-elements-array]()
+8. [Generate-list-of-possible-words-from-a-character-matrix]()
+9. [Hamiltonian_paths]()
+10. [k-partition-problem-print-all-subsets]()
+11. [kcolor_graph]()
+12. [knight]()
+13. [N-Queen]()
+14. [Permutations of a given string]()
+
+
 <h2 align="center">Dynamic Programming</h2>
 
 1. [0-1 Knapsack](./Algorithms/Dynamic%20Programming/0-1Knapsack(DP).cpp)
