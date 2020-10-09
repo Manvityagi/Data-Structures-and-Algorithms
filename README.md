@@ -23,3 +23,21 @@ We want contributing to Opportunity Calendar to be enjoyable and educational for
 To get started have a look at our [documentation on contributing](https://github.com/Manvityagi/Data-Structures-and-Algorithms/blob/master/CONTRIBUTING.md).
 
 <h2 align="center">Maintainers</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top">
+        <img width="150" height="150" src="https://avatars1.githubusercontent.com/u/32908093?s=460&u=12730fa2a3befdd2e5845238c8e61a759c27f4f4&v=4">
+        <br>
+        <a href="https://github.com/Manvityagi">Manvi Tyagi</a>
+      </td>
+      <td align="center" valign="top">
+        <img width="150" height="150" src="https://avatars0.githubusercontent.com/u/16416902?s=400&u=827b072be56eb685cdd24b290d2a72bc6c56c443&v=4">
+        <br>
+        <a href="https://github.com/ay2306">Ayush Mahajan</a>
+        <p>Loaders &amp; Plugins</p>
+      </td>
+     </tr>
+  </tbody>
+</table>
