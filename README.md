@@ -1,4 +1,7 @@
-![](https://github.com/Manvityagi/Data-Structures-and-Algorithms/raw/master/assets/ds.png)
+
+<p align="center">
+  <img src="(https://github.com/Manvityagi/Data-Structures-and-Algorithms/raw/master/assets/ds.png" alt="Sublime's custom image"/>
+</p>
 
 ## Data Structures and Algorithms - Quick Revision 
 
