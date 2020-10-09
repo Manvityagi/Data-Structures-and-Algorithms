@@ -1,12 +1,12 @@
 ## Table of Contents
 
 ### Data Structures Implementation
-1. [Priority Queue](https://github.com/Manvityagi/Data-Structures-and-Algorithms/blob/master/DS%20implementations/PRIORITY_QUEUES/)
-2. [Hashmaps](https://github.com/Manvityagi/Data-Structures-and-Algorithms/blob/master/DS%20implementations/HASHMAPS/)
-3. [Trees](https://github.com/Manvityagi/Data-Structures-and-Algorithms/blob/master/DS%20implementations/TREES)
-4. [Graphs](https://github.com/Manvityagi/Data-Structures-and-Algorithms/blob/master/DS%20implementations/GRAPHS/)
-5. [Tries](https://github.com/Manvityagi/Data-Structures-and-Algorithms/blob/master/DS%20implementations/TRIES/)
-6. [Segment Trees](https://github.com/Manvityagi/Data-Structures-and-Algorithms/blob/master/DS%20implementations/FENWICK%20TREES/)
+1. [Priority Queue](./DS%20implementations/PRIORITY_QUEUES/)
+2. [Hashmaps](./DS%20implementations/HASHMAPS/)
+3. [Trees](./DS%20implementations/TREES)
+4. [Graphs](./DS%20implementations/GRAPHS/)
+5. [Tries](./DS%20implementations/TRIES/)
+6. [Segment Trees](./DS%20implementations/FENWICK%20TREES/)
 7. [Fenwick Trees](https://github.com/Manvityagi/Data-Structures-and-Algorithms/tree/master/DS%20implementations/FENWICK%20TREES)
 
 ### Important Algorithms
@@ -22,10 +22,10 @@
 <h2 align="center">Sorting Algos</h2> 
 
 1. [Bubble Sort](./Algorithms/Sorting/bubbleSort.cpp)
-2. [Insertion Sort](https://github.com/Manvityagi/Data-Structures-and-Algorithms/blob/master/Algorithms/Sorting/insertionSort.cpp)
-3. [Merge Sort](https://github.com/Manvityagi/Data-Structures-and-Algorithms/blob/master/Algorithms/Sorting/mergeSort.cpp)
-4. [Selection Sort](https://github.com/Manvityagi/Data-Structures-and-Algorithms/blob/master/Algorithms/Sorting/selectionSort.cpp)
-5. [Quick Sort](https://github.com/Manvityagi/Data-Structures-and-Algorithms/blob/master/Algorithms/Sorting/quickSort.cpp)
+2. [Insertion Sort](./Algorithms/Sorting/insertionSort.cpp)
+3. [Merge Sort](./Algorithms/Sorting/mergeSort.cpp)
+4. [Selection Sort](./Algorithms/Sorting/selectionSort.cpp)
+5. [Quick Sort](./Algorithms/Sorting/quickSort.cpp)
 
 <h2 align="center">BackTracking</h2> 
 <h2 align="center">Dynamic Programming</h2> 
