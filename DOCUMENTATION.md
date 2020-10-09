@@ -7,7 +7,7 @@
 4. [Graphs](./DS%20implementations/GRAPHS/)
 5. [Tries](./DS%20implementations/TRIES/)
 6. [Segment Trees](./DS%20implementations/FENWICK%20TREES/)
-7. [Fenwick Trees](https://github.com/Manvityagi/Data-Structures-and-Algorithms/tree/master/DS%20implementations/FENWICK%20TREES)
+7. [Fenwick Trees](./DS%20implementations/FENWICK%20TREES)
 
 ### Important Algorithms
 
@@ -30,34 +30,34 @@
 
 <h2 align="center">Dynamic Programming</h2>
 
-1. [0-1 Knapsack](<https://github.com/Manvityagi/Data-Structures-and-Algorithms/blob/master/Algorithms/Dynamic%20Programming/0-1Knapsack(DP).cpp>)
-2. [Edit Distance](<https://github.com/Manvityagi/Data-Structures-and-Algorithms/blob/master/Algorithms/Dynamic%20Programming/EditDistance(DP).cpp>)
-3. [Longest Increasing Subsequence](<https://github.com/Manvityagi/Data-Structures-and-Algorithms/blob/master/Algorithms/Dynamic%20Programming/LongestIncSubsequence(DP).cpp>)
+1. [0-1 Knapsack](./Algorithms/Dynamic%20Programming/0-1Knapsack(DP).cpp)
+2. [Edit Distance](./Algorithms/Dynamic%20Programming/EditDistance(DP).cpp)
+3. [Longest Increasing Subsequence](./Dynamic%20Programming/LongestIncSubsequence(DP).cpp)
 
 <h2 align="center">Graphs</h2> 
 
-1. [All Pair Shortest Path ]()
-2. [Bipartite Graph]()
-3. [Cycle Detection ]()
-4. [DSU]()
-5. [Euler Path and Cycle]()
-6. [Hamiltonian Path and Cycle]()
-7. [Longest Path in a DAG]()
-8. [Minimum Spanning Tree]()
-9. [Single Source Shortest Path]()
-10. [Topological Sort]()
-11. [Traversals]()
+1. [All Pair Shortest Path ](./Algorithms/GRAPHS/All_pair_shortest_path)
+2. [Bipartite Graph](./Algorithms/GRAPHS/Bipartite%20graph)
+3. [Cycle Detection ](./Algorithms/GRAPHS/Cycle%20Detection)
+4. [DSU](./Algorithms/GRAPHS/DSU)
+5. [Euler Path and Cycle](./Algorithms/GRAPHS/Euler%20Path%20and%20Cycle)
+6. [Hamiltonian Path and Cycle](./Algorithms/GRAPHS/Hamiltonian%20Path%20and%20cycle)
+7. [Longest Path in a DAG](./Algorithms/GRAPHS/Longest%20Path%20in%20a%20DAG)
+8. [Minimum Spanning Tree](./Algorithms/GRAPHS/Minimum%20Spanning%20Tree)
+9. [Single Source Shortest Path](./Algorithms/GRAPHS/Single_source_Shortest_distance)
+10. [Topological Sort](./Algorithms/GRAPHS/Topological%20Sort)
+11. [Traversals](./Algorithms/GRAPHS/Traversals)
 
 <h2 align="center">String Matching</h2> 
 
-1. [KMP Algorithm]()
-2. [Z-algo]()
+1. [KMP Algorithm](./Algorithms/String Matching/kmp.cpp)
+2. [Z-algo](./Algorithms/String Matching/Z-algo.cpp)
 
 <h2 align="center">Tree Algorithms</h2>
 
-1. [Traversals]()
-2. [LCA]()
-3. [BST]()
+1. [Traversals](./Algorithms/TREES/Traversals)
+2. [LCA](./Algorithms/TREES/LCA)
+3. [BST](./Algorithms/TREES/BST)
 
 
 
