@@ -1,4 +1,4 @@
-![](https://github.com/Girl-Code-It/Opportunity-Calendar-Backend/raw/master/assets/oppcal.png)
+![](https://github.com/Manvityagi/Data-Structures-and-Algorithms/raw/master/assets/ds.png)
 
 ## Data Structures and Algorithms - Quick Revision 
 
