@@ -50,8 +50,8 @@
 
 <h2 align="center">String Matching</h2> 
 
-1. [KMP Algorithm](./Algorithms/String Matching/kmp.cpp)
-2. [Z-algo](./Algorithms/String Matching/Z-algo.cpp)
+1. [KMP Algorithm](./Algorithms/String%20Matching/kmp.cpp)
+2. [Z-algo](./Algorithms/String%20Matching/Z-algo.cpp)
 
 <h2 align="center">Tree Algorithms</h2>
 
