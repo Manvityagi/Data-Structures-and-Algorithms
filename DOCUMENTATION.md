@@ -28,20 +28,20 @@
 
 <h2 align="center">BackTracking</h2>
 
-1. [Selection Problems]()
-2. [Binary strings that can be formed from given wildcard pattern]()
-3. [Determine-pattern-matches-string-not]()
-4. [Find Longest Possible Route in a Matrix]()
-5. [Find-combinations-of-elements-satisfies-given-constraints]()
-6. [Find-shortest-path-in-maze]()
-7. [Find-ways-calculate-target-elements-array]()
-8. [Generate-list-of-possible-words-from-a-character-matrix]()
-9. [Hamiltonian_paths]()
-10. [k-partition-problem-print-all-subsets]()
-11. [kcolor_graph]()
-12. [knight]()
-13. [N-Queen]()
-14. [Permutations of a given string]()
+1. [Selection Problems](./Algorithms/BackTracking/SELECTION%20PROBLEMS)
+2. [Binary strings that can be formed from given wildcard pattern](./Algorithms/BackTracking/binary%20strings%20that%20can%20be%20formed%20from%20given%20wildcard%20pattern.cpp)
+3. [Determine-pattern-matches-string-not](./Algorithms/BackTracking/determine-pattern-matches-string-not.cpp)
+4. [Find Longest Possible Route in a Matrix](./Algorithms/BackTracking/Find%20Longest%20Possible%20Route%20in%20a%20Matrix.cpp)
+5. [Find-combinations-of-elements-satisfies-given-constraints](./Algorithms/BackTracking/find-combinations-of-elements-satisfies-given-constraints.cpp)
+6. [Find-shortest-path-in-maze](./Algorithms/BackTracking/find-shortest-path-in-maze.cpp)
+7. [Find-ways-calculate-target-elements-array](./Algorithms/BackTracking/find-ways-calculate-target-elements-array.cpp)
+8. [Generate-list-of-possible-words-from-a-character-matrix](./Algorithms/BackTracking/generate-list-of-possible-words-from-a-character-matrix.cpp)
+9. [Hamiltonian_paths](./Algorithms/BackTracking/hamiltonian_paths.cpp)
+10. [k-partition-problem-print-all-subsets](./Algorithms/BackTracking/k-partition-problem-print-all-subsets.cpp)
+11. [kcolor_graph](./Algorithms/BackTracking/kcolor_graph.cpp)
+12. [knight](./Algorithms/BackTracking/knight.cpp)
+13. [N-Queen](./Algorithms/BackTracking/N-Queen.cpp)
+14. [Permutations of a given string](./Algorithms/BackTracking/Permutations%20of%20a%20given%20string.cpp)
 
 
 <h2 align="center">Dynamic Programming</h2>
