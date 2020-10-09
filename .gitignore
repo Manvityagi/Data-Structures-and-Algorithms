@@ -1,1 +1,7 @@
-./Temporary Practice
+# Text editors settings
+*.project
+*.settings
+*.vscode
+.vscode/
+*.editorconfig
+.tags
