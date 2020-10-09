@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="(https://github.com/Manvityagi/Data-Structures-and-Algorithms/raw/master/assets/ds.png" alt="Sublime's custom image"/>
+  <img src="https://github.com/Manvityagi/Data-Structures-and-Algorithms/raw/master/assets/ds.png" alt="Data Structures and Algorithms"/>
 </p>
 
 ## Data Structures and Algorithms - Quick Revision 
