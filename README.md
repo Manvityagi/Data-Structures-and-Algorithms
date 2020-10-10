@@ -19,7 +19,7 @@ A quick sneak peek into this repo before an interview may help!
 
 <h2 align="center">Contributing</h2>
 
-We want contributing to Opportunity Calendar to be enjoyable and educational for everyone. We would love to have your contributions.
+We want contributing to be enjoyable and educational for everyone. We would love to have your contributions.
 To get started have a look at our [documentation on contributing](https://github.com/Manvityagi/Data-Structures-and-Algorithms/blob/master/CONTRIBUTING.md).
 
 <h2 align="center">Maintainers</h2>
