@@ -1,89 +1,88 @@
-#include <iostream>
+/* C++ program to implement basic stack operations */
+#include <bits/stdc++.h>
+
 using namespace std;
 
-int stack[100], n = 100, top = -1;
+#define MAX 1000
 
-void push(int val)
+class Stack
 {
-    // if top reaches end means stack is full now, we can't push more.
-    if (top >= n - 1)
-        cout << "Stack Overflow" << endl;
-    // otherwise just increment the top and push the value in the stack.
+    int top;
+
+public:
+    int a[MAX]; // Maximum size of Stack
+
+    Stack() 
+    { 
+        top = -1; 
+    }
+
+    bool push(int x);
+    int pop();
+    int peek();
+    bool isEmpty();
+};
+
+bool Stack::push(int x)
+{
+    // if top reaches the end of the stack then stack is full, we can't push more.
+    if (top >= (MAX - 1))
+    {
+        cout << "Stack Overflow";
+        return false;
+    }
+    // otherwise just push the value in the stack.
     else
     {
-        stack[top++] = val;
+        a[++top] = x;
+        cout << x << " pushed into stack\n";
+        return true;
     }
 }
 
-void pop()
+int Stack::pop()
 {
-    // if stack got empty then we can't pop more.
-    if (top <= -1)
-        cout << "Stack Underflow" << endl;
+    // if top is less than 0 means our stack is empty, we can't pop more.
+    if (top < 0)
+    {
+        cout << "Stack Underflow";
+        return 0;
+    }
     else
     {
-        cout << "The popped element is " << stack[top] << endl;
-        top--;
+        int x = a[top--];
+        return x;
     }
 }
 
-void display()
+int Stack::peek()
 {
-    // we can print only if we are at valid index of queue.
-    if (top >= 0)
+    if (top < 0)
     {
-        cout << "Stack elements are:";
-
-        // printing all the elements of the queue starting from top and decrementing it we will reach next element.
-        for (int i = top; i >= 0; i--)
-            cout << stack[i] << " ";
-        cout << endl;
+        cout << "Stack is Empty";
+        return 0;
     }
     else
-        cout << "Stack is empty"; // if top is -1 means it is empty.
+    {
+        int x = a[top];
+        return x;
+    }
 }
 
+// if top is less than 0 means our stack is empty, we can't pop more.
+bool Stack::isEmpty()
+{
+    return (top < 0);
+}
+
+// Driver program 
 int main()
 {
-    int ch, val;
-    cout << "1) Push in stack" << endl;
-    cout << "2) Pop from stack" << endl;
-    cout << "3) Display stack" << endl;
-    cout << "4) Exit" << endl;
-    do
-    {
-        cout << "Enter choice: " << endl;
-        cin >> ch;
-        switch (ch)
-        {
-        case 1:
-        {
-            cout << "Enter value to be pushed:" << endl;
-            cin >> val;
-            push(val);
-            break;
-        }
-        case 2:
-        {
-            pop();
-            break;
-        }
-        case 3:
-        {
-            display();
-            break;
-        }
-        case 4:
-        {
-            cout << "Exit" << endl;
-            break;
-        }
-        default:
-        {
-            cout << "Invalid Choice" << endl;
-        }
-        }
-    } while (ch != 4);
+    class Stack s;
+    s.push(10);
+    s.push(20);
+    s.push(30);
+    cout << s.pop() << " Popped from stack\n";
 
     return 0;
 }
