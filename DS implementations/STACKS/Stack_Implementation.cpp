@@ -12,9 +12,9 @@ class Stack
 public:
     int a[MAX]; // Maximum size of Stack
 
-    Stack() 
-    { 
-        top = -1; 
+    Stack()
+    {
+        top = -1;
     }
 
     bool push(int x);
@@ -75,7 +75,7 @@ bool Stack::isEmpty()
     return (top < 0);
 }
 
-// Driver program 
+// Driver program
 int main()
 {
     class Stack s;
