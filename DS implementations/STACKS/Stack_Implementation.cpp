@@ -57,6 +57,7 @@ int Stack::pop()
 
 int Stack::peek()
 {
+    // if top is less than 0 means stack is having no element.
     if (top < 0)
     {
         cout << "Stack is Empty";
@@ -64,12 +65,13 @@ int Stack::peek()
     }
     else
     {
+        // return the element at top index.
         int x = a[top];
         return x;
     }
 }
 
-// if top is less than 0 means our stack is empty, we can't pop more.
+// if top is less than 0 means our stack is empty.
 bool Stack::isEmpty()
 {
     return (top < 0);
@@ -82,6 +84,7 @@ int main()
     s.push(10);
     s.push(20);
     s.push(30);
+    s.peek();
     cout << s.pop() << " Popped from stack\n";
 
     return 0;
