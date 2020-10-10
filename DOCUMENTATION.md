@@ -26,6 +26,7 @@
 3. [Merge Sort](./Algorithms/Sorting/mergeSort.cpp)
 4. [Selection Sort](./Algorithms/Sorting/selectionSort.cpp)
 5. [Quick Sort](./Algorithms/Sorting/quickSort.cpp)
+6. [Counting Sort](./Algorithms/Sorting/CountingSort.cpp)
 
 <h2 align="center">BackTracking</h2>
 
