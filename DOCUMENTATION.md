@@ -18,6 +18,7 @@
 4. [Graphs](#Graphs)
 5. [String-Matching](#String-Matching)
 6. [Tree Algorithms](#Tree-Algorithms)
+7. [Searching Algorithms](#Searching-Algorithms)
 
 <h2 align="center">Sorting Algos</h2>
 
@@ -75,6 +76,10 @@
 1. [Traversals](./Algorithms/TREES/Traversals)
 2. [LCA](./Algorithms/TREES/LCA)
 3. [BST](./Algorithms/TREES/BST)
+
+<h2 align="center">Searching Algorithms</h2>
+
+1. [Binary Search](./Algorithms/Search/binarySearch.cp)
 
 
 
