@@ -38,6 +38,8 @@ bool Stack::push(int x)
         cout << x << " pushed into stack\n";
         return true;
     }
+
+    return false;
 }
 
 int Stack::pop()
@@ -53,6 +55,8 @@ int Stack::pop()
         int x = a[top--];
         return x;
     }
+
+    return -1;
 }
 
 int Stack::peek()
@@ -67,6 +71,8 @@ int Stack::peek()
         int x = a[top];
         return x;
     }
+
+    return -1;
 }
 
 // if top is less than 0 means our stack is empty, we can't pop more.
