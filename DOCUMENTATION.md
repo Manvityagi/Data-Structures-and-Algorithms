@@ -83,6 +83,6 @@
 <h2 align="center">Searching Algorithms</h2>
 
 1. [Binary Search](./Algorithms/Search/binarySearch.cp)
-
+2. [Linear search]( ./Algorithms/Search/binarySearch.cp)
 
 
