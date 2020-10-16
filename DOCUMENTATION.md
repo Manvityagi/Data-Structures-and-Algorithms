@@ -54,6 +54,7 @@
 1. [0-1 Knapsack](./Algorithms/Dynamic%20Programming/0-1Knapsack(DP).cpp)
 2. [Edit Distance](./Algorithms/Dynamic%20Programming/EditDistance(DP).cpp)
 3. [Longest Increasing Subsequence](./Dynamic%20Programming/LongestIncSubsequence(DP).cpp)
+4. [Longest Palindromic Substring](./Algorithms/Dynamic%20Programming/LongestPallindromicSubstring(DP).cpp)
 
 <h2 align="center">Graphs</h2> 
 
