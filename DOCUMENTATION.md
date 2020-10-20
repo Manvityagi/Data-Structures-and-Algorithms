@@ -30,6 +30,7 @@
 4. [Selection Sort](./Algorithms/Sorting/selectionSort.cpp)
 5. [Quick Sort](./Algorithms/Sorting/quickSort.cpp)
 6. [Counting Sort](./Algorithms/Sorting/CountingSort.cpp)
+7. [Radix Sort](./Algorithms/Sorting/RadixSort.cpp)
 
 <h2 align="center">BackTracking</h2>
 
