@@ -6,7 +6,7 @@
 3. [Trees](./DS%20implementations/TREES)
 4. [Graphs](./DS%20implementations/GRAPHS/)
 5. [Tries](./DS%20implementations/TRIES/)
-6. [Segment Trees](./DS%20implementations/FENWICK%20TREES/)
+6. [Segment Trees](./DS%20implementations/Segment%20TREES/)
 7. [Fenwick Trees](./DS%20implementations/FENWICK%20TREES)
 8. [Stacks](./DS%20implementations/STACKS)
 9. [Queues](./DS%20implementations/QUEUES)
@@ -56,8 +56,9 @@
 2. [Edit Distance](./Algorithms/Dynamic%20Programming/EditDistance(DP).cpp)
 3. [Longest Increasing Subsequence](./Dynamic%20Programming/LongestIncSubsequence(DP).cpp)
 4. [Longest Palindromic Substring](./Algorithms/Dynamic%20Programming/LongestPallindromicSubstring(DP).cpp)
+5. [Rod Cutting Problem](./Algorithms/Dynamic%20Programming/rod_cutting(DP).cpp)
 
-<h2 align="center">Graphs</h2> 
+<h2 align="center">Graphs</h2>
 
 1. [All Pair Shortest Path ](./Algorithms/GRAPHS/All_pair_shortest_path)
 2. [Bipartite Graph](./Algorithms/GRAPHS/Bipartite%20graph)
@@ -71,7 +72,7 @@
 10. [Topological Sort](./Algorithms/GRAPHS/Topological%20Sort)
 11. [Traversals](./Algorithms/GRAPHS/Traversals)
 
-<h2 align="center">String Matching</h2> 
+<h2 align="center">String Matching</h2>
 
 1. [KMP Algorithm](./Algorithms/String%20Matching/kmp.cpp)
 2. [Z-algo](./Algorithms/String%20Matching/Z-algo.cpp)
@@ -84,7 +85,6 @@
 
 <h2 align="center">Searching Algorithms</h2>
 
-1. [Binary Search](./Algorithms/Search/binarySearch.cp)
-2. [Linear search]( ./Algorithms/Search/binarySearch.cp)
-
-
+1. [Binary Search](./Algorithms/Search/binarySearch.cpp)
+2. [Linear search]( ./Algorithms/Search/LinearSearch.cpp)
+3. [Ternary Search]( ./Algorithms/Search/ternarySearch.cpp)
