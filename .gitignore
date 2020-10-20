@@ -4,5 +4,6 @@
 *.vscode
 .vscode/
 *.editorconfig
+.DS_Store
 .tags
 .cph
