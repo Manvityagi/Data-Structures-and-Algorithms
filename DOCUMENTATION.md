@@ -12,6 +12,7 @@
 9. [Queues](./DS%20implementations/QUEUES)
 10. [Linked List](./DS%20implementations/Linked%20List)
 11. [Queues with linked list](./DS%20implementations/QUEUES/queues_linkedlist)
+12. [Stacks with linked list](./DS%20implementations/STACKS/Stack_linked_list)
 
 ### Important Algorithms
 
