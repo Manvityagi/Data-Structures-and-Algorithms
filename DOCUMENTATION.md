@@ -63,6 +63,7 @@
 3. [Longest Increasing Subsequence](./Dynamic%20Programming/LongestIncSubsequence(DP).cpp)
 4. [Longest Palindromic Substring](./Algorithms/Dynamic%20Programming/LongestPallindromicSubstring(DP).cpp)
 5. [Rod Cutting Problem](./Algorithms/Dynamic%20Programming/rod_cutting(DP).cpp)
+6. [Matrix Chain Multiplication](./Algorithms/Dynamic%20Programming/matrix_chain_mutliplication.cpp)
 
 <h2 align="center">Graphs</h2>
 
