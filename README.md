@@ -15,7 +15,7 @@
   <a href="https://github.com/ay2306/">
     <img src="https://avatars0.githubusercontent.com/u/16416902?s=400&u=827b072be56eb685cdd24b290d2a72bc6c56c443&v=4" alt="Logo" width="80" height="80">
   </a>
-
+  <h3 align="center">Mantained By</h3>
 
   <p align="center">
     This repository contains the implmentation of some of the most basic and important data structures and algorithms implemented in C++. A quick sneak peek into this repo before an interview may help! 
@@ -28,8 +28,9 @@
   </p>
 </p>
 
-
+<p align="center">
 ![Product Name Screen Shot][product-screenshot]
+</p>
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
@@ -71,6 +72,8 @@ None of the programs require any speacial library so can be run on any standard 
 
 ## Algorithm List
 
+[View All](./DOCUMENTATION.md/)
+
 1. [Sorting Algos](./DOCUMENTATION.md/DOCU#Sorting-Algos)
 2. [Backtracking](./DOCUMENTATION.md/#BackTracking)
 3. [Dynamic Programming](./DOCUMENTATION.md/#Dynamic-Programming)
@@ -85,12 +88,11 @@ None of the programs require any speacial library so can be run on any standard 
 We want contributing to be enjoyable and educational for everyone. We would love to have your contributions.
 To get started have a look at our [documentation on contributing](https://github.com/Manvityagi/Data-Structures-and-Algorithms/blob/master/CONTRIBUTING.md).
 
-
-### Bug Reports 
+### 1. Make Bug Reports 
 A bug is a _demonstrable problem_ that is caused by the code in the repository.
 Good bug reports are extremely helpful, so thanks!
 
-### New DS or Algo 
+### 2. Adding a new DS or Algo ?
 Any important new algortihm or Data Structure not already present in the list is welcome. 
 Do create an issue first for the same and then make the PR. 
 
@@ -125,7 +127,12 @@ The commit message should be in the format - `Added 'DS/ALGO NAME'`
 git push -u origin master
 ```
 
-## Pull Requests
+### 3. Make Pull Requests
+
+
+## Authors
+
+1. [Manvi Tyagi](https://github.com/Manvityagi/)**Initial Work
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
