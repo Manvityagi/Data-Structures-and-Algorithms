@@ -29,7 +29,9 @@
 </p>
 
 <p align="center">
-![Product Name Screen Shot][product-screenshot]
+<p align="center">
+  <img src="https://github.com/Manvityagi/Data-Structures-and-Algorithms/raw/master/assets/ds.png" alt="Data Structures and Algorithms"/>
+</p>
 </p>
 
 <!-- TABLE OF CONTENTS -->
@@ -144,4 +146,3 @@ git push -u origin master
 [stars-url]: https://github.com/Manvityagi/Data-Structures-and-Algorithms/stargazers
 [issues-shield]: https://img.shields.io/github/issues/Manvityagi/Data-Structures-and-Algorithms.svg?style=flat-square
 [issues-url]: https://github.com/Manvityagi/Data-Structures-and-Algorithms/issues
-[product-screenshot]: assets/ds.png
