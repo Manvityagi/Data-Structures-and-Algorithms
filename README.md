@@ -134,7 +134,7 @@ git push -u origin master
 
 ## Authors
 
-1. [Manvi Tyagi](https://github.com/Manvityagi/)**Initial Work
+1. Manvi Tyagi - Initial Work - [View Profile](https://github.com/Manvityagi/)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
