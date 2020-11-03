@@ -13,3 +13,6 @@ void BubbleSort(int arr[], int n)
             }
     }
 }
+
+
+// By keeping track of number of swaps, it can run in O(n) time in best case - when the array is already sorted 

@@ -2,7 +2,6 @@
 // n - size of array
 void SelectionSort(int arr[], int n)
 {
-
     int min_i;
 
     for (int i = 0; i < n; i++)
