@@ -33,7 +33,7 @@ public:
     {
         pq.push_back(element);
         int childIndex = pq.size() - 1;
-        //Compare data we just inserted to parents data.If its less than parens we swap
+        //Compare data we just inserted to parents data. If its less than parents we swap
         //Continue to do this until we reach the root node
         while (childIndex > 0)
         {
@@ -66,7 +66,6 @@ public:
         int childindex2 = 2;
         while (childindex1 < pq.size())
         {
-
             if (pq[childindex1] < pq[parentindex] || pq[childindex2] < pq[parentindex])
             {
                 if (pq[childindex1] < pq[childindex2])

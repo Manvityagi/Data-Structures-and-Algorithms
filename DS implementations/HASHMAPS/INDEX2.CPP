@@ -1,12 +1,4 @@
-// Load Factor
-// When the total number of items in hashmap goes on increasing keeping the default initial capacity of hashmap 16, At one point of time,
-// hashmap performance will start degrading and need to increase buckets for improving performance.
-// Load Factor is a measure, which decides when exactly to increase the hashmap capacity(buckets) to maintain get and put operation complexity of O(1).
-// Default load factor of Hashmap is 0.75f (i.e 75% of current map size).
-// You can also say, load factor is a measure "Till what load, hashmap can allow elements to put in it before its capacity is automatically increased"
-
-// When the size of hashmap is changed, the process of re-calculating the hashcode of already placed key-value pair again is known as Rehashing.
-// Rehashing is done to distribute items across the new length hashmap, so that get and put operation time complexity remains O(1).
+// time complexity remains O(1).
 
 #include <string>
 
